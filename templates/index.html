@@ -1,0 +1,51 @@
+
+    {% include 'head.html' %}
+    <div class="container b_form">
+        {% if not show_result %}
+        <h1 class="mt-5" style="max-width: 600px; margin: 0 auto; padding: 30px 0px;">Business Loan Application</h1>
+        <form id="loanForm" action="/" method="POST" style="max-width: 600px; margin: 10px auto; padding: 10px 0px;">
+            <div class="form-group">
+                <label for="businessName">Business Name:</label>
+                <input type="text" id="businessName" name="businessName" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="yearEstablished">Year Established:</label>
+                <input type="text" id="yearEstablished" name="yearEstablished" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="loanAmount">Loan Amount:</label>
+                <input type="number" id="loanAmount" name="loanAmount" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="accountingProvider">Accounting Provider:</label>
+                <select id="accountingProvider" name="accountingProvider" class="form-control" style="width:600px;">
+                    <option value="Xero">Xero</option>
+                    <option value="MYOB">MYOB</option>
+                </select>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="styled-button"> Submit Application</button>
+            </div>
+        </form>
+        {% endif %}
+
+        {% if show_result %}
+        <div class="mt-4 " style="max-width: 600px;  margin:  30px auto; ">
+            <h2 style="padding-bottom:20px;">Loan Application Result</h2>
+            <p><strong>Business Name:</strong> {{ result.businessName }}</p>
+            <p><strong>Year Established:</strong> {{ result.yearEstablished }}</p>
+            <p><strong>Pre-Assessment:</strong> {{ result.preAssessment }}</p>
+            <p style="padding-bottom:20px;"><strong>Provider:</strong> {{ result.accounting_provider }}</p>
+            <a href="/" class="styled-button" style="text-decoration: none; ">Back to Application</a>
+        </div>
+        {% endif %}
+    </div>
+    <footer>
+        <p> Creator-Hemlata Yadav   |Contact: 8882086806  |Email:hemlatayadav2728@gmail.com </p>
+    </footer>
+
+</body>
+</html>
+
+
+
