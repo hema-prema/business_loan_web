@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+  color:black;
+}
+.nav{
+  background-color: #F5F5F5;
+}
+.navbar-brand {
+
+  font-family:"Nanum Myeongjo";
+  padding: 16px;
+  font-size:30px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.navbar-brand img{
+  width: 50px;
+  border-radius: 10px;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.pics {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 2px 0px 0px 0px;
+}
+
+.pics img {
+  width: 412px;
+  height: 308px;
+}
+
+.pic-slide {
+  display: inline-block;
+  animation: slide 18s infinite linear;
+}
+
+.pic-slide2 {
+  display: inline-block;
+  animation: slide2 18s infinite linear;
+}
+.center {
+  width: 600px;
+  margin: 100px auto;
+  text-align: center;
+}
+.center h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.button-container {
+  text-align: center;
+  margin-top: 10px;
+  padding-bottom: 60px;
+}
+.styled-button {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+
+}
+.styled-button:hover {
+  background-color: #45a049;
+}
+.styled-button a{
+  text-decoration: none;
+  color: white;
+}
+
+.extra {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+  background-color: #DFD7BF;
+}
+.extra h2 {
+  font-size: 24px;
+  color: #3F2305;
+}
+.extra p{
+  width:70%;
+  color: #3F2305;
+}
+
+.b_form input {
+    width:600px;
+}
+
+footer{
+    height:100px;
+    width:100vw;
+    background:#3F2305;
+    color:#DFD7BF;
+}
+footer p{
+padding-top:40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
